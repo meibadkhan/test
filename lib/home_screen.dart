@@ -71,10 +71,14 @@ class _HomePageState extends State<HomePage> {
           final person = items[index];
           return Container(
             key: ValueKey(person),
-            color: Colors.grey[200],
+            decoration:BoxDecoration(
+              color: Colors.grey[200],
+borderRadius: BorderRadius.circular(10)
+            )
+,
             margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             child: ListTile(
-
+trailing: Icon(Icons.drag_indicator_rounded),
               title: Text(person.name ?? ''),
               subtitle: Text(person.address ?? ''),
             ),
